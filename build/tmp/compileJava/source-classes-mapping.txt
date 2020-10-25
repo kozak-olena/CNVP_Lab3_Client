@@ -1,0 +1,6 @@
+CNVP_Lab3_Client/JsonParser.java
+ CNVP_Lab3_Client.JsonParser
+CNVP_Lab3_Client/ServerRequest.java
+ CNVP_Lab3_Client.ServerRequest
+CNVP_Lab3_Client/Main.java
+ CNVP_Lab3_Client.Main
