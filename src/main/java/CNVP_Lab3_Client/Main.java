@@ -47,13 +47,13 @@ public class Main {
         }
     }
 
-    public static boolean validation(String inputedIp) {
+    public static boolean validation(String inputIp) {
         boolean validation = false;
-        if (Validation.isValidInetAddress(inputedIp)) {
-            System.out.print("The IP address " + inputedIp + " is valid");
+        if (Validation.isValidInetAddress(inputIp)) {
+            System.out.print("The IP address " + inputIp + " is valid");
             return true;
         } else {
-            System.out.print("The IP address " + inputedIp + " isn't valid");
+            System.out.print("The IP address " + inputIp + " isn't valid");
             return false;
         }
 
@@ -74,15 +74,15 @@ public class Main {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SocketException, UnknownHostException {
 
         int input = 0;
         boolean running = true;
+        DatagramSocket socket = new DatagramSocket();
+        InetAddress address = getInetAddress();
+        System.out.println("");
         while (running)
             try {
-                DatagramSocket socket = new DatagramSocket();
-                InetAddress address = getInetAddress();
-
                 System.out.println("Connected to server");
                 Client client = new Client();
                 input = readUserInput();
